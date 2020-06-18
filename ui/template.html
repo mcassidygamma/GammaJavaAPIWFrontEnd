@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>Weather App</title>
+      <base href="/">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="icon" type="image/x-icon" href="favicon.ico">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+      <script src="https://kit.fontawesome.com/42128bb8c4.js" crossorigin="anonymous"></script>
+      <link href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-shims.min.css" media="all" rel="stylesheet">
+      <link href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-font-face.min.css" media="all" rel="stylesheet">
+      <link href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all" rel="stylesheet">
+      <link rel="stylesheet" href="styles.09e2c710755c8867a460.css">
+      <style></style>
+   </head>
+   <body>
+         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+               <a href="#" class="navbar-brand">Weather</a>
+                  <button type="submit" data-toggle="modal" data-target="#reportIssueModal" class="btn btn-outline-success my-2 my-sm-0">Report Issue</button>
+                  <div id="reportIssueModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade">
+                     <div class="modal-dialog">
+                        <form name="report-issue" onsubmit="$('#reportIssueModal').modal('hide');">
+                           <div class="modal-content">
+                              <div class="modal-header">
+                                 <h5 id="exampleModalLabel" class="modal-title">Report Issue</h5>
+                                 <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+                              </div>
+                              <div class="modal-body">
+                                 <div class="form-group"><label for="name" class="col-form-label">Name:</label><input required="" type="text" id="name" name="name" class="form-control """></div>
+                                 <div class="form-group"><label for="email" class="col-form-label">Email:</label><input required="" type="email" id="email" name="email" class="form-control """></div>
+                                 <div class="form-group"><label for="issue" class="col-form-label">Issue:</label><textarea required="" type="text" id="issue" name="issue" class="form-control """></textarea></div>
+                              </div>
+                              <div class="modal-footer"><button type="button" data-dismiss="modal" class="btn btn-secondary">Cancel</button><button type="submit" class="btn btn-primary">Submit</button></div>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+            </div>
+         </nav>
+         <div class="container">
+               <div>
+                  <div class="row mt-2">
+                     <div class="col-sm"><button type="button" data-toggle="modal" data-target="#addModal" class="btn btn-primary"><i class="fas fa-plus" aria-hidden="true"></i> Add</button></div>
+                  </div>
+                  <div>
+                        <h1>Newbury</h1>
+                        <div class="row row-cols-1 row-cols-md-5">
+                           <div class="col mb-4">
+                              <div class="card">
+                                 <div class="card-body">
+                                    <h5 class="card-title">18 June 7PM</h5>
+                                    <img class="card-img-top" src="https://openweathermap.org/img/wn/10d@4x.png" alt="">
+                                    <h6 class="card-subtitle mb-2 text-muted">14.9° light rain</h6>
+                                    <dl class="row">
+                                       <dt class="col-sm-5">Feels Like</dt>
+                                       <dd class="col-sm-7">14.9°</dd>
+                                       <dt class="col-sm-5">Wind</dt>
+                                       <dd class="col-sm-7">2.21mph</dd>
+                                    </dl>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col mb-4">
+                              <div class="card">
+                                 <div class="card-body">
+                                    <h5 class="card-title">18 June 10PM</h5>
+                                    <img class="card-img-top" src="https://openweathermap.org/img/wn/10n@4x.png" alt="">
+                                    <h6 class="card-subtitle mb-2 text-muted">11.9° light rain</h6>
+                                    <dl class="row">
+                                       <dt class="col-sm-5">Feels Like</dt>
+                                       <dd class="col-sm-7">10.9°</dd>
+                                       <dt class="col-sm-5">Wind</dt>
+                                       <dd class="col-sm-7">3.01mph</dd>
+                                    </dl>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col mb-4">
+                              <div class="card">
+                                 <div class="card-body">
+                                    <h5 class="card-title">19 June 1AM</h5>
+                                    <img class="card-img-top" src="https://openweathermap.org/img/wn/10n@4x.png" alt="">
+                                    <h6 class="card-subtitle mb-2 text-muted">11.9° light rain</h6>
+                                    <dl class="row">
+                                       <dt class="col-sm-5">Feels Like</dt>
+                                       <dd class="col-sm-7">9.9°</dd>
+                                       <dt class="col-sm-5">Wind</dt>
+                                       <dd class="col-sm-7">4.22mph</dd>
+                                    </dl>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col mb-4">
+                              <div class="card">
+                                 <div class="card-body">
+                                    <h5 class="card-title">19 June 4AM</h5>
+                                    <img class="card-img-top" src="https://openweathermap.org/img/wn/10n@4x.png" alt="">
+                                    <h6 class="card-subtitle mb-2 text-muted">12.9° light rain</h6>
+                                    <dl class="row">
+                                       <dt class="col-sm-5">Feels Like</dt>
+                                       <dd class="col-sm-7">9.9°</dd>
+                                       <dt class="col-sm-5">Wind</dt>
+                                       <dd class="col-sm-7">5.03mph</dd>
+                                    </dl>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col mb-4">
+                              <div class="card">
+                                 <div class="card-body">
+                                    <h5 class="card-title">19 June 7AM</h5>
+                                    <img class="card-img-top" src="https://openweathermap.org/img/wn/10d@4x.png" alt="">
+                                    <h6 class="card-subtitle mb-2 text-muted">11.9° light rain</h6>
+                                    <dl class="row">
+                                       <dt class="col-sm-5">Feels Like</dt>
+                                       <dd class="col-sm-7">7.9°</dd>
+                                       <dt class="col-sm-5">Wind</dt>
+                                       <dd class="col-sm-7">6.18mph</dd>
+                                    </dl>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                  </div>
+                  <div>
+                        <h1>Oxford</h1>
+                        <div class="row row-cols-1 row-cols-md-5">
+                           <div class="col mb-4">
+                              <div class="card">
+                                 <div class="card-body">
+                                    <h5 class="card-title">18 June 7PM</h5>
+                                    <img class="card-img-top" src="https://openweathermap.org/img/wn/04d@4x.png" alt="">
+                                    <h6 class="card-subtitle mb-2 text-muted">14.9° broken clouds</h6>
+                                    <dl class="row">
+                                       <dt class="col-sm-5">Feels Like</dt>
+                                       <dd class="col-sm-7">13.9°</dd>
+                                       <dt class="col-sm-5">Wind</dt>
+                                       <dd class="col-sm-7">2.97mph</dd>
+                                    </dl>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col mb-4">
+                              <div class="card">
+                                 <div class="card-body">
+                                    <h5 class="card-title">18 June 10PM</h5>
+                                    <img class="card-img-top" src="https://openweathermap.org/img/wn/03n@4x.png" alt="">
+                                    <h6 class="card-subtitle mb-2 text-muted">11.9° scattered clouds</h6>
+                                    <dl class="row">
+                                       <dt class="col-sm-5">Feels Like</dt>
+                                       <dd class="col-sm-7">10.9°</dd>
+                                       <dt class="col-sm-5">Wind</dt>
+                                       <dd class="col-sm-7">2.23mph</dd>
+                                    </dl>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col mb-4">
+                              <div class="card">
+                                 <div class="card-body">
+                                    <h5 class="card-title">19 June 1AM</h5>
+                                    <img class="card-img-top" src="https://openweathermap.org/img/wn/03n@4x.png" alt="">
+                                    <h6 class="card-subtitle mb-2 text-muted">11.9° scattered clouds</h6>
+                                    <dl class="row">
+                                       <dt class="col-sm-5">Feels Like</dt>
+                                       <dd class="col-sm-7">8.9°</dd>
+                                       <dt class="col-sm-5">Wind</dt>
+                                       <dd class="col-sm-7">3.93mph</dd>
+                                    </dl>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col mb-4">
+                              <div class="card">
+                                 <div class="card-body">
+                                    <h5 class="card-title">19 June 4AM</h5>
+                                    <img class="card-img-top" src="https://openweathermap.org/img/wn/10n@4x.png" alt="">
+                                    <h6 class="card-subtitle mb-2 text-muted">11.9° light rain</h6>
+                                    <dl class="row">
+                                       <dt class="col-sm-5">Feels Like</dt>
+                                       <dd class="col-sm-7">8.9°</dd>
+                                       <dt class="col-sm-5">Wind</dt>
+                                       <dd class="col-sm-7">4.48mph</dd>
+                                    </dl>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col mb-4">
+                              <div class="card">
+                                 <div class="card-body">
+                                    <h5 class="card-title">19 June 7AM</h5>
+                                    <img class="card-img-top" src="https://openweathermap.org/img/wn/10d@4x.png" alt="">
+                                    <h6 class="card-subtitle mb-2 text-muted">12.9° light rain</h6>
+                                    <dl class="row">
+                                       <dt class="col-sm-5">Feels Like</dt>
+                                       <dd class="col-sm-7">8.9°</dd>
+                                       <dt class="col-sm-5">Wind</dt>
+                                       <dd class="col-sm-7">5.75mph</dd>
+                                    </dl>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                  </div>
+               </div>
+               <form name="new-city" onsubmit="$('#addModal').modal('hide');">
+                  <div id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel" class="modal fade" style="display: none;" aria-hidden="true">
+                     <div class="modal-dialog">
+                        <div class="modal-content">
+                           <div class="modal-header">
+                              <h5 id="addModalLabel" class="modal-title">Add Location</h5>
+                              <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+                           </div>
+                           <div class="modal-body">
+                              <div class="form-group"><label for="city-name" class="col-form-label">City Name:</label><input required="" type="text" id="city-name" name="city-name" class="form-control """></div>
+                           </div>
+                           <div class="modal-footer"><button type="button" data-dismiss="modal" class="btn btn-secondary">Close</button><button type="submit" class="btn btn-primary"><i class="fas fa-plus" aria-hidden="true"></i> Add</button></div>
+                        </div>
+                     </div>
+                  </div>
+               </form>
+         </div>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+   </body>
+</html>
+
